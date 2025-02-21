@@ -188,7 +188,7 @@
                       En applikation som læser
                       optællingsdata, visualiserer
                       dataen og opretter en
-                      optælllingsrapport.
+                      optællingsrapport.
 
                       Har fjernet brugen af excel filer
                       som før blev brugt til at lave
@@ -226,18 +226,22 @@
 
               <!-- CREATOR Portal -->
               <v-col cols="12" md="4">
-                <v-card height="100%" class="d-flex flex-column pa-4" elevation="0" style="background: linear-gradient(135deg, #a8e6cf, #dcedc1);">
-                  <v-card-title class="text-h5 font-weight-medium pa-4">CREATOR</v-card-title>
+                <v-card 
+                  height="100%" 
+                  class="d-flex flex-column pa-4" 
+                  elevation="0" 
+                  style="background: linear-gradient(135deg, #a8e6cf, #dcedc1);"
+                  @click="$router.push('/where-to-surf')"
+                  :style="{
+                    cursor: 'pointer',
+                    transition: 'transform 0.2s ease-in-out'
+                  }"
+                  :class="'hover-scale'"
+                >
+                  <v-card-title class="text-h5 font-weight-medium pa-4">WHERE TO SURF?</v-card-title>
                   <v-card-text class="flex-grow-1 pa-4">
                     <p class="text-grey-darken-1">
-                      En online platform til udfyldning
-                      af data med live validering af det
-                      indsatte data. Har lettet
-                      forretningsgange i flere
-                      afdelinger og fjernet brug af
-                      lokale excel filer, som før blev
-                      brugt til at håndtere stamdata.
-                      Bygget med Vue.js og Python.
+                      Et privat projekt, som tager vejrdata fra OpenWeather API og fortæller mig hvor på Lolland-Falster det er bedst at surfe lige nu.
                     </p>
                   </v-card-text>
                 </v-card>
@@ -318,11 +322,18 @@
                 </div>
                 <v-row>
                   <v-col cols="12" md="6">
-                    <v-card height="100%" class="d-flex flex-column pa-4" elevation="0" style="background: linear-gradient(135deg, #a8e6cf, #dcedc1);">
-                      <v-card-title class="text-h5 font-weight-medium pa-4">WHERE TO SURF?!</v-card-title>
+                    <v-card height="100%" class="d-flex flex-column pa-4" elevation="0" 
+                    style="background: linear-gradient(135deg, #a8e6cf, #dcedc1);"
+                    @click="$router.push('/where-to-surf')"
+                    :style="{
+                      cursor: 'pointer',
+                      transition: 'transform 0.2s ease-in-out'
+                    }"
+                    :class="'hover-scale'">
+                      <v-card-title class="text-h5 font-weight-medium pa-4">WHERE TO SURF?</v-card-title>
                       <v-card-text class="flex-grow-1 pa-4">
                         <p class="text-grey-darken-1">
-                          Et privat projekt, som jeg har lavet som tager vejrdata og fortæller mig hvor på Lolland-Falster det er bedst at surfe idag.
+                          Et privat projekt, som tager vejrdata fra OpenWeather API og fortæller mig hvor på Lolland-Falster det er bedst at surfe lige nu.
                         </p>
                       </v-card-text>
                     </v-card>
@@ -545,6 +556,10 @@ export default {
 }
 
 .wave-divider:hover svg {
+  transform: scale(1.02);
+}
+
+.hover-scale:hover {
   transform: scale(1.02);
 }
 </style>

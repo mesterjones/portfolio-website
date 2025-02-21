@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeComponent from '../components/HomeComponent.vue'
-import WhereSurf from '../components/WhereSurf.vue'
+import WhereSurf from '@/components/WhereSurf.vue'
 const routes = [
   {
     path: '/',
@@ -10,6 +10,11 @@ const routes = [
   {
     path: '/where-surf',
     name: 'whereSurf',
+    component: WhereSurf
+  },
+  {
+    path: '/where-to-surf',
+    name: 'WhereSurf',
     component: WhereSurf
   }
 ]
